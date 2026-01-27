@@ -95,6 +95,7 @@ function App() {
     } catch (err) {
       alert(`❌ Erreur serveur. Vérifiez le port 8001.`);
     } finally {
+      
       setLoading(false);
     }
   };
