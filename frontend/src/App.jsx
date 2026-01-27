@@ -93,9 +93,8 @@ function App() {
       const res = await axios.post(`https://large-language-model-zdmj.onrender.com/${endpoint}`, payload);
       setResult(res.data);
     } catch (err) {
-      alert(`❌ Erreur serveur. Vérifiez le port 8001.`);
+      alert("❌ Erreur serveur. Impossible de contacter l’API.");
     } finally {
-      
       setLoading(false);
     }
   };
