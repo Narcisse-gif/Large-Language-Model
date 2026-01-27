@@ -205,7 +205,5 @@ async def gen_letter(info: LetterRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    print("🚀 Lancement du serveur API...")
-    print("📍 URL: http://0.0.0.0:8001")
-    print("📚 Docs: http://0.0.0.0:8001/docs")
-    uvicorn.run(app, host="0.0.0.0", port=8001, log_level="info")
+    port = int(os.environ.get("PORT", 8001))
+    uvicorn.run(app, host="0.0.0.0", port=port)
