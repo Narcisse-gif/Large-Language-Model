@@ -90,7 +90,7 @@ function App() {
     setResult(null);
     try {
       const payload = { ...data, template_style: selectedTemplate };
-      const res = await axios.post(`http://localhost:8001/${endpoint}`, payload);
+      const res = await axios.post(`https://large-language-model-zdmj.onrender.com/${endpoint}`, payload);
       setResult(res.data);
     } catch (err) {
       alert("❌ Erreur serveur. Impossible de contacter l’API.");
